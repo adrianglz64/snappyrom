@@ -129,7 +129,8 @@ together merely by some plastic pins in the bottom half of the case that go into
 holes in the top half of the case.  It is also held by the label that was
 applied across the top and bottom halves.  Unfortunately, the label has to be
 peeled from the back of the cartridge (the side facing away from your c64 when
-the cartridge is inserted) in order to open it.
+the cartridge is inserted)
+ in order to open it.
 
 As mentioned previously, the original hardware has a 32-pin socket that
 accommodates the larger 128KB, 256KB and 512KB chips, but the top half of the
@@ -157,6 +158,11 @@ the page.
 
 The updated CPLD core can be downloaded from the links at the end of this
 document.
+
+Once you have updated your CPLD core you can use EasyProg to program the new
+ROM as usual.
+
+NOTE: Make sure you use the .bin files with EasyProg, _NOT_ the .crt files.
 
 
 JiffyDOS Notes
