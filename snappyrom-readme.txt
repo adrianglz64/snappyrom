@@ -12,7 +12,10 @@ Quick Start / TLDR
 SnappyROM is an updated ROM for your SuperSnapshot V5.  Burn it to a 128KB or 
 bigger EPROM/FlashROM and use it to replace the EPROM in your SSv5.  It is also
 compatible with the EasyFlash3, but a CPLD upgrade is needed to add 128K
-compatibility.  Read on for more details.
+compatibility.
+
+Use the ".bin" files to burn to an EPROM or to the EF3, or the ".crt" files
+for vice.  Read on for more details.
 
 
 Introduction
@@ -162,7 +165,7 @@ document.
 Once you have updated your CPLD core you can use EasyProg to program the new
 ROM as usual.
 
-NOTE: Make sure you use the .bin files with EasyProg, _NOT_ the .crt files.
+NOTE: Make sure you use the ".bin" files with EasyProg, _NOT_ the ".crt" files.
 
 
 JiffyDOS Notes
