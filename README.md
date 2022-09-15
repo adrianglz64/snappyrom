@@ -15,5 +15,6 @@ See the extended readme file for more details.
 ## Links
 + [CPLD upgrade for the EF3](https://github.com/adrianglz64/easyflash3-cpld)
 + [CPLD upgrade for the EF3 with FC3 support](https://github.com/adrianglz64/easyflash3-fc3)
++ [EF3 CPLD upgrade instructions](https://skoe.de/easyflash/ef3update/) (scroll down to CPLD CORE section)
 
 [^1]: EF3 needs CPLD upgrade to support 128K SuperSnapshot ROMs
