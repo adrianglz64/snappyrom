@@ -1,6 +1,6 @@
 
 ======================================================
- SnappyROM V5.31/Style
+ SnappyROM V5.34/Style
 ======================================================
  128KB ROM update for the Super Snapshot V5 cartridge 
 ======================================================
@@ -10,12 +10,13 @@ Quick Start / TLDR
 ==================
 
 SnappyROM is an updated ROM for your SuperSnapshot V5.  Burn it to a 128KB or 
-bigger EPROM/FlashROM and use it to replace the EPROM in your SSv5.  It is also
-compatible with the EasyFlash3, but a CPLD upgrade is needed to add 128K
-compatibility.
+bigger EPROM/FlashROM and use it to replace the EPROM in your SSv5.  It is now
+also supported by several cartridges/boards like Kung Fu Flash, 1541 Ultimate,
+Ultimate 64, and EasyFlash3 (a CPLD upgrade is needed to add 128K Snapshot ROM
+compatibility to the EF3).
 
-Use the ".bin" files to burn to an EPROM or to the EF3, or the ".crt" files
-for vice.  Read on for more details.
+Use the ".bin" files to burn to an EPROM or to program your EF3 using EasyProg.
+Use the ".crt" files for Vice, Kung Fu Flash, etc.  Read on for more details.
 
 
 Introduction
@@ -63,6 +64,29 @@ prompt.
 without trying to boot the disk in the drive (like pressing DEL instead of F7).
 
 
+New in V5.34
+============
+
++ The wedge now moves the cursor down to an empty line before executing a
+command.
+
++ Improved compatibility with JiffyDOS kernal, if present:
+
+    * Using Ctrl-D to switch to the next available IEC device works as expected
+    now.  Using >#n to switch devices with the Snapshot wedge now also updates
+    JiffyDOS's active device.
+
+    * SuperSnapshot Turbo load and save now fall back to kernal load/save if
+    both a JD kernal and a JD-compatible drive are present.
+
++ Fixed compatibility with 16MB REUs (1541U, Ultimate 64).  A 16MB REU
+would be reported as no REU being present because an overflow in the size
+detect routine.
+
++ Fixed compatibility (hang at boot) with an ARMSID installed in the first 
+socket of a SIDFX.
+
+
 Compatibility
 =============
 
@@ -99,7 +123,7 @@ AM27C040-150    512KB x 8 EPROM 150nS   OK
 ST27C4001-10F1  512KB x 8 EPROM 100nS   OK
 
 FlashROM chips are recommended because you don't need a UV lamp to erase them, 
-but they are usually slighly more expensive than their EPROM counterparts.  If 
+but they are usually slightly more expensive than their EPROM counterparts.  If 
 you do get a FlashROM chip, make sure it is supported by your EPROM programmer.
 
 When using chips larger than 128K you can either write as many copies of the ROM 
@@ -132,8 +156,7 @@ together merely by some plastic pins in the bottom half of the case that go into
 holes in the top half of the case.  It is also held by the label that was
 applied across the top and bottom halves.  Unfortunately, the label has to be
 peeled from the back of the cartridge (the side facing away from your c64 when
-the cartridge is inserted)
- in order to open it.
+the cartridge is inserted) in order to open it.
 
 As mentioned previously, the original hardware has a 32-pin socket that
 accommodates the larger 128KB, 256KB and 512KB chips, but the top half of the
@@ -181,7 +204,7 @@ ROM, or devices like SD2IEC variants that natively support JiffyDOS.
 
 JiffyDOS is a commercial product that is under copyright and can still be
 purchased legally.  The Jiffy load feature is meant to be used in cases where
-it's not practical to insall a Kernal ROM replacement in your c64/128.  If you
+it's not practical to install a Kernal ROM replacement in your c64/128.  If you
 use it please consider purchasing an official Kernal ROM overlay IC or a ROM
 image at:
 
